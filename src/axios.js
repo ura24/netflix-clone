@@ -1,7 +1,7 @@
-import axios, { AxiosInstance } from "axios"
+import axios from "axios"
 
 // TMDBからbaseURLリクエストを作成
-const instance: AxiosInstance = axios.create({
+const instance = axios.create({
     baseURL: "https://api.themoviedb.org/3"
 })
 

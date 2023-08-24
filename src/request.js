@@ -1,4 +1,4 @@
-const API_KEY: String = "30f34729463ccb04fb8cd2e3f7444002"
+const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 
 export const requests = {
     feachTrending:`/trending/all/week?api_key=${API_KEY}&language=en-us`,
