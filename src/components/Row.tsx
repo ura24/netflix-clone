@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "../axios";
 
+const base_url = "https://image.tmdb.org/t/p/original";
+
 type Props = {
     title: string;
     fetchUrl: string;
@@ -32,6 +34,13 @@ export const Row = ({ title, fetchUrl }: Props) => {
     console.log(movies)
 
     return (
-        <div className="Row" />
+        <div className="Row" >
+            <h2>{title}</h2>
+            <div className="Row-posters">
+                {movies.map((movie, i) => (
+                    <img key={movie.id} className={`Row-poster`} src={`${base_url}${movie.poster_path}`} alt={`${movie.name}`} />
+                ))}
+            </div>
+        </div>
     );
 };
