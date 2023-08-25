@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "../axios";
+import axios from "../../axios";
+import './Row.css';
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
 type Props = {
     title: string;
     fetchUrl: string;
-    isLargeRow?: boolean;
 };
 
 type Movie = {
@@ -15,7 +15,6 @@ type Movie = {
     title: string;
     original_name: string;
     poster_path: string;
-    backdrop_path: string;
 };
 
 export const Row = ({ title, fetchUrl }: Props) => {

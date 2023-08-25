@@ -1,14 +1,15 @@
 import './App.css';
-import { Row } from './components/Row';
+import { Banner } from './components/Banner/Banner';
+import { Row } from './components/Row/Row';
 import { requests } from './request';
 
 function App() {
   return (
     <div className="App">
+      <Banner />
       <Row
         title="NETFLIX ORIGUINALS"
         fetchUrl={requests.feachNetflixOriginals}
-        isLargeRow
       />
       <Row title="Top Rated" fetchUrl={requests.feactTopRated} />
       <Row title="Action Movies" fetchUrl={requests.feactActionMovies} />
